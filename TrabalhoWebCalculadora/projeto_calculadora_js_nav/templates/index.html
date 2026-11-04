@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Início</a> |
+        <a href="{{ url_for('soma_page') }}">Soma</a> |
+        <a href="{{ url_for('subtracao_page') }}">Subtração</a>
+    </nav>
+
+    <h1>Bem-vindo à Calculadora Modularizada</h1>
+    <p>Escolha uma operação no menu acima.</p>
+</body>
+</html>
