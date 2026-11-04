@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisão</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Início</a> |
+        <a href="{{ url_for('soma_page') }}">Soma</a> |
+        <a href="{{ url_for('subtracao_page') }}">Subtração</a>
+        <a href="{{ url_for('multiplicacao_page') }}">Multiplicação</a>
+    </nav>
+
+    <h1>Operação de Divisão</h1>
+    <input type="number" id="valor1"><br><br>
+    <input type="number" id="valor2"><br><br>
+    <button onclick="calcular_divisão()">Calcular Divisão</button>
+
+    <h2 id="resultado"></h2>
+</body>
+</html>

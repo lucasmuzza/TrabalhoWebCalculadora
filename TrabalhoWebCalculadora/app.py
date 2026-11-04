@@ -52,6 +52,7 @@ def multiplicacao():
     resultado = operacoes.calcular_multiplicao(valor1, valor2)
     return jsonify({"resultado": resultado})
 
+# Página de multiplicação a
 @app.route("/divisao")
 def divisao():
     return render_template("divisao.html")
