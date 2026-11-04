@@ -54,7 +54,7 @@ def multiplicacao():
 
 # Página de multiplicação a
 @app.route("/divisao")
-def divisao():
+def divisao_page():
     return render_template("divisao.html")
 
 @app.route("/api/divisao", methods=["POST"])
