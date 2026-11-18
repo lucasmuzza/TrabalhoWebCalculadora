@@ -1,59 +1,41 @@
-function calcularSoma() {
-    const v1 = document.getElementById("valor1").value;
-    const v2 = document.getElementById("valor2").value;
-
-    fetch("/api/soma", {
+function enviarRequisicao(endpoint, valor1, valor2) {
+    fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ valor1: v1, valor2: v2 })
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ valor1: valor1, valor2: valor2 })
     })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
-    });
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
+        })
+        .catch(error => {
+            console.error("Erro:", error);
+            document.getElementById("resultado").innerText = "Erro ao calcular.";
+        });
+}
+
+function calcularSoma() {
+    let v1 = document.getElementById("valor1").value;
+    let v2 = document.getElementById("valor2").value;
+    enviarRequisicao("/api/soma", v1, v2);
 }
 
 function calcularSubtracao() {
-    const v1 = document.getElementById("valor1").value;
-    const v2 = document.getElementById("valor2").value;
-
-    fetch("/api/subtracao", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ valor1: v1, valor2: v2 })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
-    });
+    let v1 = document.getElementById("valor1").value;
+    let v2 = document.getElementById("valor2").value;
+    enviarRequisicao("/api/subtracao", v1, v2);
 }
 
 function calcularMultiplicacao() {
-    const v1 = document.getElementById("valor1").value;
-    const v2 = document.getElementById("valor2").value;
-
-    fetch("/api/multiplicacao", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ valor1: v1, valor2: v2 })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
-    });
+    let v1 = document.getElementById("valor1").value;
+    let v2 = document.getElementById("valor2").value;
+    enviarRequisicao("/api/multiplicacao", v1, v2);
 }
 
 function calcularDivisao() {
-    const v1 = document.getElementById("valor1").value;
-    const v2 = document.getElementById("valor2").value;
-
-    fetch("/api/divisao", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ valor1: v1, valor2: v2 })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("resultado").innerText = "Resultado: " + data.resultado;
-    });
+    let v1 = document.getElementById("valor1").value;
+    let v2 = document.getElementById("valor2").value;
+    enviarRequisicao("/api/divisao", v1, v2);
 }
