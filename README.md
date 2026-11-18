@@ -31,8 +31,8 @@ TrabalhoWebPythonFlask/
     └── divisao.html
     └── multiplicacao.html
 └── static/             # Arquivos estáticos
-└── script.js
-└── style.css           # Estilização das páginas
+    └── script.js
+    └── style.css           # Estilização das páginas
 ```
 
 ---
