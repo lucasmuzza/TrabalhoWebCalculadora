@@ -2,6 +2,9 @@
 
 Este projeto é um exemplo didático de como usar **Python + Flask + HTML + JavaScript** para criar uma calculadora simples com páginas de **Soma** e **Subtração**.
 
+
+**AUTOR**: Lucas Muzza Pires Ferreira - 2° período de Ciência da Computação na Unifeso.
+
 ---
 
 ## Requisitos
@@ -16,7 +19,7 @@ Este projeto é um exemplo didático de como usar **Python + Flask + HTML + Java
 ## Estrutura do Projeto
 
 ```
-projeto_calculadora_web/
+TrabalhoWebPythonFlask/
 │
 ├── app.py              # Rotas Flask
 ├── operacoes.py        # Funções matemáticas
@@ -25,8 +28,11 @@ projeto_calculadora_web/
 │   ├── index.html
 │   ├── soma.html
 │   └── subtracao.html
+    └── divisao.html
+    └── multiplicacao.html
 └── static/             # Arquivos estáticos
 └── script.js
+└── style.css           # Estilização das páginas
 ```
 
 ---
@@ -36,7 +42,7 @@ projeto_calculadora_web/
 Instale o Git, abra um terminal na pasta onde deseja salvar o projeto e clone o repositório:
 
 ```powershell
-git clone https://github.com/usuario/nome-do-repositorio.git
+git clone https://github.com/lucasmuzza/TrabalhoWebCalculadora.git
 ```
 
 Substitua o endereço de exemplo pela URL do repositório deste projeto. Em seguida, acesse a pasta criada pelo Git:
