@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="topo">
+        <a class="marca" href="{{ url_for('index') }}">Calculadora</a>
+        <nav>
+            <a href="{{ url_for('index') }}" aria-current="page">Início</a>
+            <a href="{{ url_for('soma_page') }}" class="t-soma">Soma</a>
+            <a href="{{ url_for('subtracao_page') }}" class="t-subtracao">Subtração</a>
+            <a href="{{ url_for('multiplicacao_page') }}" class="t-multiplicacao">Multiplicação</a>
+            <a href="{{ url_for('divisao_page') }}" class="t-divisao">Divisão</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Escolha uma operação</h1>
+            <p>Cada operação tem a sua própria página.</p>
+        </section>
+        <section class="grade">
+            <a class="bloco t-soma" href="{{ url_for('soma_page') }}"><span class="simbolo">+</span><span
+                    class="nome">Soma</span></a>
+            <a class="bloco t-subtracao" href="{{ url_for('subtracao_page') }}"><span class="simbolo">−</span><span
+                    class="nome">Subtração</span></a>
+            <a class="bloco t-multiplicacao" href="{{ url_for('multiplicacao_page') }}"><span
+                    class="simbolo">×</span><span class="nome">Multiplicação</span></a>
+            <a class="bloco t-divisao" href="{{ url_for('divisao_page') }}"><span class="simbolo">÷</span><span
+                    class="nome">Divisão</span></a>
+        </section>
+    </main>
+</body>
+
+</html>

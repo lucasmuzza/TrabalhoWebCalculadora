@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Divisão · Calculadora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body class="t-divisao">
+    <header class="topo">
+        <a class="marca" href="{{ url_for('index') }}">Calculadora</a>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('soma_page') }}" class="t-soma">Soma</a>
+            <a href="{{ url_for('subtracao_page') }}" class="t-subtracao">Subtração</a>
+            <a href="{{ url_for('multiplicacao_page') }}" class="t-multiplicacao">Multiplicação</a>
+            <a href="{{ url_for('divisao_page') }}" class="t-divisao" aria-current="page">Divisão</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="painel">
+            <h1>Divisão</h1>
+            <div class="campos">
+                <input type="number" id="valor1" placeholder="Primeiro valor" step="any" aria-label="Primeiro valor">
+                <span class="simbolo">÷</span>
+                <input type="number" id="valor2" placeholder="Segundo valor" step="any" aria-label="Segundo valor">
+            </div>
+            <button type="button" onclick="calcularDivisao()">Calcular divisão</button>
+
+            <div class="visor" aria-live="polite">
+                <h2 id="resultado"></h2>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
